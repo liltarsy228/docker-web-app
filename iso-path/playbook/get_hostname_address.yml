@@ -1,0 +1,6 @@
+- name: получение данных с хоста
+  copy:
+    dest: /tmp/{{ ansible_hostname }}.txt
+    content: |
+      Hostname: {{ ansible_hostname }}
+      IP_Address: {{ ansible_default_ipv4.address }}
