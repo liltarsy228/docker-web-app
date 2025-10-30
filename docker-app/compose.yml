@@ -3,7 +3,7 @@ name: WEBAPP onm Docker stack with Compose.yml
 services:
   db:
     image: mariadb:10.11
-#    container_name: db
+    container_name: db
     restart: always
     volumes:
       - ./db-init:/docker-entrypoint-initdb.d #Dump file is entrypoint initialization database
@@ -18,7 +18,7 @@ services:
 
   tespapp:
     image: site:latest
-#    container_name: tespapp
+    container_name: tespapp
     restart: always
     depends_on:
       - db
